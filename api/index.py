@@ -7,9 +7,9 @@ app = Flask(__name__)
 def home():
     secret_value = os.environ.get("MY_SECRET", "No secret configured")
     return jsonify({
-        "message": "Hello, Flask API is working!",
-        "Secret": secret_value
+        "message": "Hello, Flask API is working on Vercel!",
+        "secret": secret_value
     })
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run()
